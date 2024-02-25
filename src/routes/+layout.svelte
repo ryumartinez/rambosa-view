@@ -28,6 +28,12 @@
 </main>
 
 <style>
+
+    :global(body) {     
+        margin: 0;
+        padding: 0; 
+    }
+    
     main {
         height: 100vh;
         display: grid;
