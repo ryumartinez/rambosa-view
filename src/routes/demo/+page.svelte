@@ -1,3 +1,8 @@
+<script>
+
+	import MenuItemCard from "../../components/MenuItemCard.svelte";
+
+</script>
 <div class="main-grid">
     <div class="navbar">
       <p class="address">179 Murphy Court Riverside, CA 92501</p>
@@ -11,12 +16,25 @@
       </ul>
     </div>
     <div class="hero"> 
-      <h1 class="main__title hero__title">Nuestro Menu</h1>
+      <h1 class="main__title hero__title">Rambosa</h1>
       <img class="hero__img" src="https://images.unsplash.com/photo-1517938021627-eec2bbe94dcd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="" >
     </div>
+    <div class="cta even-columns">
+        <div>
+          <h2>Nuestro Menu</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequuntur repellat facilis provident dolorum laborum blanditiis veritatis, ipsa sequi cumque soluta quod fugiat dolorem quam.</p>
+        </div>
+      </div>
     <div class="full-split even-columns">
         <img src="//unsplash.it/600" alt="">
-        <p class="v-center bg-dark p-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quisquam distinctio laudantium velit similique a ducimus, quae sint, adipisci quidem eaque voluptate illum aut. Dolorum inventore illum molestiae atque possimus?</p>
+        <div class="cards" >
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+        </div>
+        
       </div>
 
       <div class="sales-points even-columns three-columns">
@@ -36,6 +54,12 @@
 </div>
 
 <style>
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
     .main-grid {
   --column-count: 6;
   position: relative;
