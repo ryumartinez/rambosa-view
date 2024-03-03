@@ -35,8 +35,8 @@
         grid-column: 1 / span 1;
         grid-row: 1 / span 2;
         background-color: palegoldenrod;
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
         display: inline-block;
     }

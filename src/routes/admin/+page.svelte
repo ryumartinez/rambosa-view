@@ -1,6 +1,5 @@
 <script>
-
-	import MenuItemCard from "../components/MenuItemCard.svelte";
+	import MenuItemCard from "../../components/MenuItemCard.svelte";
 
 </script>
 
@@ -11,9 +10,9 @@
       <p class="logo">RAMBOSA</p>
       <ul class="links">
         <a>sdfasdf</a>
-        <a> sdfasdf</a>
-        <a> sdfasdf</a>
-        <a> sdfasdf</a>
+        <a>sdfasdf</a>
+        <a>sdfasdf</a>
+        <a>sdfasdf</a>
       </ul>
     </div>
 
@@ -21,56 +20,20 @@
 
     <div class="hero"> 
       <h1 class="main__title hero__title">Rambosa</h1>
-      <img class="hero__img" src="https://media-manager.starsinsider.com/gallery/1920/na_5e09b9264c1ff.jpg" alt="" >
+      <img class="hero__img" src="https://media.istockphoto.com/photos/pile-of-paper-documents-in-the-office-picture-id1068380820?k=6&m=1068380820&s=612x612&w=0&h=4WkJS2AZDSavmW4y6w-7KdPoL-rOkVEXq8yMf2qPtvE=" alt="" >
     </div>
 
 
 
     <div class="cta even-columns">
         <div>
-          <h2>Nuestro Menu</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequuntur repellat facilis provident dolorum laborum blanditiis veritatis, ipsa sequi cumque soluta quod fugiat dolorem quam.</p>
+          <h2>Inventario</h2>
+          <p> Cargar Platos | Ordenes | Registrar clientes
+           </p>
         </div>
     </div>
 
-    <div class="full-split even-columns menu__section">
-       
-            <!-- <img class="menu__image" src="https://images.pexels.com/photos/1618929/pexels-photo-1618929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
-            <div class="cards" >
-              <MenuItemCard/>
-              <MenuItemCard/>
-              <MenuItemCard/>
-              <MenuItemCard/>
-              <MenuItemCard/>
-              <MenuItemCard/>
-      
-          </div>
-       
-         <div class="cards" >
-            <MenuItemCard/>
-            <MenuItemCard/>
-            <MenuItemCard/>
-            <MenuItemCard/>
-            <MenuItemCard/>
-            <MenuItemCard/>
-      
-        </div>
-    </div>
 
-      <div class="sales-points even-columns three-columns">
-        <div class="sales-points__sales-point">
-          <h2 class="sales-points__title">Easier</h2>
-          <p class="sales-point__body">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-        <div class="sales-points__sales-point">
-          <h2 class="sales-points__title">Faster</h2>
-          <p class="sales-point__body">Delectus perferendis doloribus mollitia quibusdam facere eius!</p>
-        </div>
-        <div class="sales-points__sales-point">
-          <h2 class="sales-points__title">Consistent</h2>
-          <p class="sales-point__body">Nostrum possimus, porro ipsam iure soluta est!</p>
-        </div>
-      </div>
 </div>
 
 <style>
@@ -276,7 +239,7 @@ h2 {
 .sales-points {
     height: 440px;
   padding: 3rem 0;
-  background: #222;
+  background: #efefef;
   text-align: center;
 }
 
