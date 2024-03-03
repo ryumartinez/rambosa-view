@@ -10,10 +10,10 @@
       <p class="schedule">Abierto de 8:00 a 18:00</p>
       <p class="logo">RAMBOSA</p>
       <ul class="links">
-        <a>sdfasdf</a>
-        <a> sdfasdf</a>
-        <a> sdfasdf</a>
-        <a> sdfasdf</a>
+        <a>Inicio</a>
+        <a>Menu</a>
+        <a>Sobre Nosotros</a>
+        <a>Ver ordenes</a>
       </ul>
     </div>
 
