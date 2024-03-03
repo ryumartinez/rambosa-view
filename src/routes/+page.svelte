@@ -1,199 +1,293 @@
 <script>
-    import MenuItemCard from "./../components/MenuItemCard.svelte"
+
+	import MenuItemCard from "../components/MenuItemCard.svelte";
+
 </script>
 
-<section class="hero">
-    Hero
-</section>
-
-<main>
-    <header>
-        <div class="top-items">
-            <div class="address centered-grid-item">address</div>
-            <div class="schedule centered-grid-item">schedule</div>
-        </div>
-        <nav>
-            <div class="centered-grid-item">a</div>
-            <div class="centered-grid-item">b</div>
-            <div class="centered-grid-item">c</div>
-        </nav>
-    </header>
-    
-    <div><section class="menu-view">
-        <div class="menu-grid">
-            <div>
-                <h1>Nuestro Menu</h1>
-                <p>Descripcion</p>
-            </div>
-            <nav>
-                <div>a</div>
-                <div>b</div>
-                <div>c</div>
-                <div>d</div>
-                <div>e</div>
-            </nav>
-            <div class="menu-items-container">
-                <div class="menu-sipnopsis">menu sipnopsis</div>
-                <div class="wea">
-                    <MenuItemCard/>
-                    <MenuItemCard/>
-                    <MenuItemCard/>
-                    <MenuItemCard/>
-                    <MenuItemCard/>
-                </div>
-            </div>
-        </div>
-    </section></div>
-    <footer>
-        <nav>
-           <div class="centered-grid-item">a</div>
-           <div class="centered-grid-item">b</div>
-           <div class="centered-grid-item">c</div>
-           <div class="centered-grid-item">d</div>
-           <div class="centered-grid-item">e</div>
-        </nav>
-        <div class="copy-right">
-            <div class="copy-right-item1 centered-grid-item">copy-right content 1</div>
-            <div class="copy-right-item2 centered-grid-item">copy-right content 2</div>
-        </div>
-    </footer>
-</main>
+<div class="main-grid">
+    <div class="navbar">
+      <p class="address">179 Murphy Court Riverside, CA 92501</p>
+      <p class="schedule">Abierto de 8:00 a 18:00</p>
+      <p class="logo">RAMBOSA</p>
+      <ul class="links">
+        <a>sdfasdf</a>
+        <a>sdfasdf</a>
+        <a>sdfasdf</a>
+        <a>sdfasdf</a>
+      </ul>
+    </div>
 
 
+
+    <div class="hero"> 
+      <h1 class="main__title hero__title">Rambosa</h1>
+      <img class="hero__img" src="https://media-manager.starsinsider.com/gallery/1920/na_5e09b9264c1ff.jpg" alt="" >
+    </div>
+
+
+
+    <div class="cta even-columns">
+        <div>
+          <h2>Nuestro Menu</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequuntur repellat facilis provident dolorum laborum blanditiis veritatis, ipsa sequi cumque soluta quod fugiat dolorem quam.</p>
+        </div>
+    </div>
+    <div class="even-columns">AAAAAAAAAAAA</div>
+
+
+
+    <div class="full-split even-columns menu__section">
+       
+            <img class="menu__image" src="https://images.pexels.com/photos/1618929/pexels-photo-1618929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+       
+         <div class="cards" >
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+            <MenuItemCard/>
+        </div>
+    </div>
+
+      <div class="sales-points even-columns three-columns">
+        <div class="sales-points__sales-point">
+          <h2 class="sales-points__title">Easier</h2>
+          <p class="sales-point__body">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="sales-points__sales-point">
+          <h2 class="sales-points__title">Faster</h2>
+          <p class="sales-point__body">Delectus perferendis doloribus mollitia quibusdam facere eius!</p>
+        </div>
+        <div class="sales-points__sales-point">
+          <h2 class="sales-points__title">Consistent</h2>
+          <p class="sales-point__body">Nostrum possimus, porro ipsam iure soluta est!</p>
+        </div>
+      </div>
+</div>
 
 <style>
 
-    nav {
-        display: flex;
-        gap: 1rem;
-    }
+.cards {
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    background-color: #efefef;
+}
 
-    .hero {
-        height: 590px;
-        background-color: #474A45;
-    }
+.main-grid {
+  --column-count: 6;
+  position: relative;
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: minmax(1rem, 1fr) repeat(var(--column-count), minmax(0, 10rem)) minmax(1rem, 1fr);
+}
 
-    .wea {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
+.main-grid > * {
+  grid-column: 1 / -1;
+  
+  display: grid;
+  grid-template-columns: subgrid;
+}
 
-    .menu-view {
-        background-color: #E6FBCC;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media (max-width: 650px){
+  .main-grid > * > * {
+    grid-column: 2 / -2;
+  }
+}
 
-    .menu-grid {
-        height: 1422px;
-        width: 1230px;
-        display: grid;
-        grid-template-rows: 246px 70px 1fr;
-        
-    }
+@media (min-width: 650px) {
+  
+  .even-columns > * {
+    grid-column: span var(--col-width);
+  }
+  .even-columns > *:first-child {
+    grid-column: var(--col-start, 2) / span var(--col-width);
+  }
+  .even-columns > *:last-child {
+    grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
+  }
 
-    .menu-items-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        @media only screen and (max-width: 600px) {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-    }
-
-    
-    main {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-
-    header {
-        position: relative;
-        background-color: #474A45;
-        height: 160px;
-        display: grid;
-        grid-template-rows: 60px 1fr;
-        grid-template-columns: 200px 1fr 1fr 1fr 200px;
-    }
-
-    header > nav {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 2 / 5;
-    }
-
-    header > .top-items {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 2 / 5;
-    }
-
-    header > .top-items > .address {
-        grid-column: 1 / span 1;
-    }
-
-    header > .top-items > .schedule {
-        grid-column: 3 / span 1;
-    }
-
-    header::after {
+  
+  .two-columns {
+    --col-width: calc(var(--column-count) / 2);
+  }
+ 
+  
+  .three-columns {
+    --col-width: calc(var(--column-count) / 3);
+  }
+  
+  .hero {
+    padding-bottom: 0 !important;
+    padding: 0;
+    position: relative;
+  }
+  
+   .navbar::after {
         content: '';
         width: 100%;
         border-bottom: solid 1px #E6FBCC;
         position: absolute;
         left: 0;
-        top: 50px;
+        top: 60px;
         z-index: 1;
     }
+  
+  .hero__title {
+    grid-row: 1 / span 2;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .links {
+      grid-row: 2 / 2;
+    grid-column: 6 / span 2;
+  }
+  
+  .navbar { 
+    position: absolute;
+    z-index:3;
+    width: 100%;
+  }
+  .address {
+    grid-row: 1 / 2;
+    grid-column: 2 / 7;
+  }
+  .schedule {
+    grid-row: 1 / 2;
+    grid-column: 7 / span 2;
+  }
+  .logo {
+    grid-row: 2 / 2;
+    grid-column: 2 / 7;
+  }
+  
+  .hero__img {
+    grid-row: 1 / span 2;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  
+  .wea {
+    position: absolute;
+    z-index: 0 ;
+    background-color: pink;
+    width: 100%;
+    height: 160px;
+  }
+  
+  .hero__body {
+    grid-row: 2;
+    grid-column: 2 / 4;
+  }
+  
+}
 
-    footer {
-        position: relative;
-        background-color: #3F7B54;
-        height: 440px;
-        display: grid;
-        grid-template-columns: 200px repeat(5,1fr) 200px;
-        grid-template-rows: 80px 1fr 80px;
-    }
+.more-stuff {
+  --col-width: 2;
+  --col-start: 3;
+}
 
-    footer::after {
-        content: '';
-        width: 100%;
-        border-bottom: solid 1px #E6FBCC;
-        position: absolute;
-        left: 0;
-        bottom: 110px;
-        z-index: 1;
-    }
+.cta {
+  --col-width: 4;
+  --col-start: 3;
+}
 
-    footer > nav {
-        display: grid;
-        grid-gap: 1px;
-        grid-template-columns: subgrid;
-        grid-column: 2 / 7;
-        grid-row: 2 / 3;
-    }
+.full-split {
+  gap: 0;
+}
 
-    footer > .copy-right {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 2 / 7;
-        grid-row: 3/3;
-    }
+.full-split > * {
+  --col-start: 1;
+  --col-width: 4;
+  grid-column: 1 / -1;
+}
 
-    footer > .copy-right > .copy-right-item1 {
-        grid-column: 1 / span 2;
-    }
+.full-split > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    footer > .copy-right > .copy-right-item2 {
-        grid-column: 5 / span 1;
-    }
+.full-split > h2 {
+    z-index: 2;
+}
 
-    .centered-grid-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
+body {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  padding: 0.75em 2em;
+  border-radius: 100vmax;
+
+}
+
+
+
+.main__title {
+  font-size: clamp(3.5rem, 7vw + 1rem, 5rem);
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero {
+  padding-bottom: 3em;
+}
+
+.sales-points {
+  padding: 3rem 0;
+  background: #efefef;
+  text-align: center;
+}
+
+.more-stuff {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+.cta {
+  background: #222;
+  padding: 3em 0;
+  text-align: center;
+  color: #f4f4f4;
+  column-gap: 1em;
+}
+
+.v-center {
+  display: grid;
+  align-items: center;
+  margin: 0;
+}
+
+.bg-dark { background: black; color: white; }
+.p-3 { padding: 3rem;}
 </style>

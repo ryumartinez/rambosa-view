@@ -9,11 +9,11 @@
 
 <style>
     .menu-item-card {
-        width: 500px;
+        width: 700px;
         background-color: white;
         display: grid;
         grid-template-columns: auto 1fr auto;
-        grid-template-rows: 30px 1fr;
+        grid-template-rows: 50px 1fr;
         border-radius: 25px;
         padding: 1rem;
     }
