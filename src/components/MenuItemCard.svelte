@@ -5,10 +5,26 @@
         <p class="description">descripcion</p>
     </div>
     <p class="price">precio</p>
+    <div class="buttons">
+        <button>Pedir</button>
+        <button>Editar</button>
+        <button>Eliminar</button>
+    </div>
+   
 </div>
 
 <style>
+
+    .buttons {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        display: flex;
+        gap: 1em;
+    }
+
     .menu-item-card {
+        position: relative;
         width: 700px;
         background-color: white;
         display: grid;
