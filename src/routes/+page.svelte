@@ -169,6 +169,7 @@
   }
   
   .hero__img {
+    opacity: 50%;
     grid-row: 1 / span 2;
     grid-column: 1 / -1;
     width: 100%;
@@ -263,6 +264,7 @@ h2 {
 }
 
 .sales-points {
+    height: 440px;
   padding: 3rem 0;
   background: #efefef;
   text-align: center;
