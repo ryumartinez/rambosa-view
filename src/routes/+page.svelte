@@ -9,7 +9,7 @@
   }
 </script>
 
-<Modal {showModal}/>
+<Modal {showModal} on:click={toggleModal}/>
 <div class="main-grid">
     <div class="navbar">
       <p class="address">179 Murphy Court Riverside, CA 92501</p>
