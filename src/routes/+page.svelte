@@ -1,9 +1,15 @@
 <script>
 
 	import MenuItemCard from "../components/MenuItemCard.svelte";
+  import Modal from "../components/Modal.svelte";
+  let showModal
 
+  const toggleModal = () => {
+    showModal = !showModal
+  }
 </script>
 
+<Modal {showModal}/>
 <div class="main-grid">
     <div class="navbar">
       <p class="address">179 Murphy Court Riverside, CA 92501</p>
@@ -17,22 +23,18 @@
       </ul>
     </div>
 
-
-
     <div class="hero"> 
       <h1 class="main__title hero__title">Rambosa</h1>
       <img class="hero__img" src="https://media-manager.starsinsider.com/gallery/1920/na_5e09b9264c1ff.jpg" alt="" >
     </div>
-
-
 
     <div class="cta even-columns">
         <div>
           <h2>Nuestro Menu</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo consequuntur repellat facilis provident dolorum laborum blanditiis veritatis, ipsa sequi cumque soluta quod fugiat dolorem quam.</p>
         </div>
+        <button on:click={toggleModal}>Modal</button>
     </div>
-
     <div class="full-split even-columns menu__section">
        
             <!-- <img class="menu__image" src="https://images.pexels.com/photos/1618929/pexels-photo-1618929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
