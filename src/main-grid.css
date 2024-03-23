@@ -1,3 +1,9 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.6;
+    font-size: 1.125rem;
+  }
+
 .main-grid {
     --column-count: 6;
     position: relative;
@@ -42,4 +48,10 @@
     .three-columns {
       --col-width: calc(var(--column-count) / 3);
     }
+  }
+
+  .full-split > * {
+    --col-start: 1;
+    --col-width: 4;
+    grid-column: 1 / -1;
   }

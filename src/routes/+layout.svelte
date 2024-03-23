@@ -1,9 +1,9 @@
 <script>
-    import '../app.css'
-    import '../main-grid.css'
+  import '../reset.css'
+  import '../main-grid.css'
 </script>
   
 
 <div class="main-grid">
-<slot/>
+  <slot/>
 </div>
