@@ -10,7 +10,7 @@
 </script>
 
 <Modal {showModal} on:click={toggleModal}/>
-<div class="main-grid">
+
     <div class="navbar">
       <p class="address">179 Murphy Court Riverside, CA 92501</p>
       <p class="schedule">Abierto de 8:00 a 18:00</p>
@@ -73,7 +73,7 @@
           <p class="sales-point__body">Nostrum possimus, porro ipsam iure soluta est!</p>
         </div>
       </div>
-</div>
+
 
 <style>
 
@@ -85,50 +85,6 @@
     gap: 2rem;
     flex-direction: column;
     background-color: #efefef;
-}
-
-.main-grid {
-  --column-count: 6;
-  position: relative;
-  display: grid;
-  column-gap: 1rem;
-  grid-template-columns: minmax(1rem, 1fr) repeat(var(--column-count), minmax(0, 10rem)) minmax(1rem, 1fr);
-}
-
-.main-grid > * {
-  grid-column: 1 / -1;
-  
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-@media (max-width: 650px){
-  .main-grid > * > * {
-    grid-column: 2 / -2;
-  }
-}
-
-@media (min-width: 650px) {
-  
-  .even-columns > * {
-    grid-column: span var(--col-width);
-  }
-  .even-columns > *:first-child {
-    grid-column: var(--col-start, 2) / span var(--col-width);
-  }
-  .even-columns > *:last-child {
-    grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
-  }
-
-  
-  .two-columns {
-    --col-width: calc(var(--column-count) / 2);
-  }
- 
-  
-  .three-columns {
-    --col-width: calc(var(--column-count) / 3);
-  }
 }
 
 .hero {
