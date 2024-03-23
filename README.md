@@ -43,3 +43,6 @@ You can preview the production build with `npm run preview`.
 Css reset made following Elad Shechter and Josh Comeau guidelines 
 https://www.joshwcomeau.com/css/custom-css-reset/#eight-root-stacking-context-9
 https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/
+
+Css main layout made following Kevin Powell subgrid tutorial
+https://www.youtube.com/watch?v=UwV4LtO0nHo&list=PL4-IK0AVhVjM4Kjqw_zN-Y3neCFXWPDJ2&index=3
