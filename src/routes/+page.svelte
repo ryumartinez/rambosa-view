@@ -129,8 +129,9 @@
   .three-columns {
     --col-width: calc(var(--column-count) / 3);
   }
-  
-  .hero {
+}
+
+.hero {
     padding-bottom: 0 !important;
     padding: 0;
     position: relative;
@@ -202,8 +203,6 @@
     grid-row: 2;
     grid-column: 2 / 4;
   }
-  
-}
 
 .more-stuff {
   --col-width: 2;
