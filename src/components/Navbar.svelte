@@ -46,6 +46,13 @@
 		z-index: 2;
 	}
 
+	.main__title {
+		font-size: clamp(3.5rem, 7vw + 1rem, 5rem);
+		text-transform: uppercase;
+		line-height: 0.9;
+		margin-bottom: 0.2em;
+	}
+
 	.links {
 		grid-row: 2 / 2;
 		grid-column: 6 / span 2;
