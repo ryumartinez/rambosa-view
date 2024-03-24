@@ -1,8 +1,4 @@
-body {
-    font-family: "Work Sans", sans-serif;
-    line-height: 1.6;
-    font-size: 1.125rem;
-  }
+
 
 .main-grid {
     --column-count: 6;

@@ -22,15 +22,12 @@
 		top: 60px;
 		z-index: 1;
 	}
-
-
 	.links {
 		grid-row: 2 / 2;
 		grid-column: 6 / span 2;
 		display: flex;
 		gap: 3em;
 	}
-
 	.navbar {
 		position: absolute;
 		z-index: 3;

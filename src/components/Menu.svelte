@@ -18,7 +18,7 @@
 			quam.
 		</p>
 	</div>
-	<button on:click={toggleModal}>Modal</button>
+	<button on:click={toggleModal} class="btn modal__btn">Modal</button>
 </div>
 
 <div class="full-split even-columns menu__section">
@@ -43,6 +43,12 @@
 </div>
 
 <style>
+	.modal__btn {
+		width: 300px;
+		text-align: center;
+		margin: auto;
+	}
+
 	.cards {
 		padding: 3em;
 		display: flex;
@@ -67,15 +73,7 @@
 		display: block;
 		max-width: 100%;
 	}
-	.btn {
-		cursor: pointer;
-		text-decoration: none;
-		text-transform: uppercase;
-		background: black;
-		color: white;
-		padding: 0.75em 2em;
-		border-radius: 100vmax;
-	}
+
 
 	.main__title {
 		font-size: clamp(3.5rem, 7vw + 1rem, 5rem);
