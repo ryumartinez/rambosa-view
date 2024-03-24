@@ -8,7 +8,10 @@
 		showModal = !showModal;
 	};
 </script>
-<Modal {showModal} on:click={toggleModal} />
+<Modal {showModal} on:click={toggleModal}>
+	<h1 slot="header">adfads</h1>
+	<p>sfsdfsdf</p>
+</Modal>
 <div class="cta even-columns">
 	<div>
 		<h2>Nuestro Menu</h2>
