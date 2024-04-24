@@ -46,3 +46,7 @@ https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/
 
 Css main layout made following Kevin Powell subgrid tutorial
 https://www.youtube.com/watch?v=UwV4LtO0nHo&list=PL4-IK0AVhVjM4Kjqw_zN-Y3neCFXWPDJ2&index=3
+
+#Auth
+Authentication made following this tutorial
+https://supabase.com/docs/guides/getting-started/tutorials/with-sveltekit?queryGroups=language&language=ts
