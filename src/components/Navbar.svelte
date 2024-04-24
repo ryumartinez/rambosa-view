@@ -1,4 +1,3 @@
-
 <div class="navbar">
 	<p class="address">179 Murphy Court Riverside, CA 92501</p>
 	<p class="schedule">Abierto de 8:00 a 18:00</p>
@@ -12,7 +11,6 @@
 </div>
 
 <style>
-
 	.navbar::after {
 		content: '';
 		width: 100%;
@@ -45,6 +43,4 @@
 		grid-row: 2 / 2;
 		grid-column: 2 / 7;
 	}
-
-	
 </style>

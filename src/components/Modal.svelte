@@ -1,11 +1,11 @@
-<script >
-   export let showModal = false
+<script>
+	export let showModal = false;
 
-   const handleKeyDown = (event) => {
-if (event.key === 'Escape') {
-showModal = false
-}
-}
+	const handleKeyDown = (event) => {
+		if (event.key === 'Escape') {
+			showModal = false;
+		}
+	};
 </script>
 
 {#if showModal}
@@ -13,8 +13,8 @@ showModal = false
 	<div class="backdrop" on:click|self>
 		<div class="modal">
 			<button on:click class="close">X</button>
-            <slot name="header"/>
-			<slot/>
+			<slot name="header" />
+			<slot />
 		</div>
 	</div>
 {/if}

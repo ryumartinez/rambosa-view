@@ -13,7 +13,6 @@
 	</div>
 </div>
 
-
 <style>
 	.btn {
 		cursor: pointer;

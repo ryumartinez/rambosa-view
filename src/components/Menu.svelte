@@ -1,13 +1,14 @@
 <script>
-    import MenuItemCard from '../components/MenuItemCard.svelte';
+	import MenuItemCard from '../components/MenuItemCard.svelte';
 	import Modal from '../components/Modal.svelte';
 
-    let showModal;
+	let showModal;
 
 	const toggleModal = () => {
 		showModal = !showModal;
 	};
 </script>
+
 <Modal {showModal} on:click={toggleModal}>
 	<h1 slot="header">adfads</h1>
 	<p>sfsdfsdf</p>
@@ -62,7 +63,6 @@
 		background-color: #efefef;
 	}
 
-
 	.cta {
 		--col-width: 4;
 		--col-start: 3;
@@ -76,7 +76,6 @@
 		display: block;
 		max-width: 100%;
 	}
-
 
 	.main__title {
 		font-size: clamp(3.5rem, 7vw + 1rem, 5rem);
